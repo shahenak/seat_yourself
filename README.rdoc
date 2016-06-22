@@ -23,6 +23,70 @@ Things you may want to cover:
 
 * ...
 
+Decide what problems we are trying to solve
+For people to make online reservations (go on website, make reservations)
+Think about who will be using our application
+Diners, restaurant owners
+Decide what our goals are, and what "done" will look like
+You can make a reservation
+Understand our constraints, e.g. when the project must be completed, what the budget is, etc
+6 days - (goal Fri: MVP is done - can make reservation)
+Must Have:
+As a user, I am presented with a list of restaurants on the homepage.
+As a user, I can sign up, login, and logout.
+As a user, on the page for a restaurant I can make a reservation if I am logged in.
+As a user, I can go to a page to see a list of the reservations I’ve booked.
+As a user, I can go to a page to see the list of restaurants sorted by cuisines.
+As a user, I will not be able to make a reservation if the restaurant is closed
+As a restaurant owner, I can add a restaurant
+As a restaurant owner, I can update information - i.e. how many seats
+As a restaurant owner, I can view the total number of reservations and the customers
+As a user, I can see the information for a restaurant (phone number, address, payment methods, hours of operation, menu)
+
+
+Nice to Have:
+As a user, order online for delivery
+As a user, I can cancel a reservation
+As a user, I can update/change a reservation
+
+
+Happy to Have:
+As a user, I can view alerts from restaurants regarding number of seats available
+As a restaurant owner, I can upload a menu
+As a restaurant owner, I can advertise special deals
+As a restaurant owner, I can add alerts about remaining seats
+As a user, I can see nearby restaurants
+As a user, I can select or save (if an account is made) to get a list of suggested restaurants
+As a user, I can filter by location
+As a user, I can filter by price
+As a user, I can filter by cuisine
+As a user i can see how pAs a user, I want to track my loyalty points
+As a user, I want to redeem my loyalty points
+As a user, I can view restaurant reviews
+As a user, I can add restaurant reviews
+As a user, I can rate a restaurant
+As a user, I can view the menu
+As a user, I can view recommendations based on history/profile preferences
+As a user, I can see how popular the restuarants are
+As a user, I can set notifications (email option or web app alert or google calendar add-in) for when my reservation is
+
+Key Terms to Define
+Review
+A rating or comment on a restaurant
+Reservation (time/date, restaurant, user, number of people)
+User
+People with accounts
+Can own a restaurant
+
+Key Assumptions:
+A restaurant can only be open from 11am - 8pm, 7 days a week.
+Reservations on the hour (length: 1 hour)
+A restaurant can only hold 100 people in any given time slot.
+A reservation can be for a party of 2 to 20 people.
+We don’t care about tables
+XX% of seats are available for reservations
+
+
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
