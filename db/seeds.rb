@@ -8,3 +8,4 @@
 User.create(name: "Carol")
 Restaurant.create(name: "McD", user_id: 1)
 Reservation.create(size: 4, restaurant_id: 1, user_id: 1)
+Reservation.create(size: 2, restaurant_id: 1, user_id: 1)
