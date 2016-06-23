@@ -17,7 +17,7 @@ def create
 end
 
 def show
-  @reservation = Reservation.ind(params[:id])
+  @reservations = Reservation.all
 end
 
 def delete

@@ -1,0 +1,15 @@
+<%= form_for @reservation do |f| %>
+  <div class="field">
+    <%= f.label :time %><br>
+    <%= f.datetime_field :time%>
+  </div>
+
+  <div class="field">
+    <%= f.label :size %>
+    <%= f.number_field :size %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
