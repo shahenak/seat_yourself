@@ -4,13 +4,20 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all
   end
 
+
+    def show
+      @restaurant = Restaurant.find(params[:id])
+      if current_user
+        @reservation = @restaurant.reservations.build
+      end
+    end
+
   def new
     @restaurant = Restaurant.new
   end
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
-    @reservation = @restaurant.reservations.build
     if @restaurant.save
       flash[:notice] = "Restaurant was successfully created."
       redirect_to restaurants_path
@@ -28,18 +35,15 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
     if @restaurant.update_attributes(restaurant_params)
       flash[:notice] = "Restaurant was successfully updated."
-      redirect_to restaurants_path
+      redirect_to restaurants_path(@restaurant)
     else
       flash[:alert] = "Restaurant not successfully updated."
       render :edit
     end
   end
 
-  def show
-    @restaurant = Restaurant.find(params[:id])
-  end
 
-  def delete
+  def destroy
     @restaurant = Restaurant.find(params[:id])
     @restaurant.destroy
     redirect_to restaurant_path
