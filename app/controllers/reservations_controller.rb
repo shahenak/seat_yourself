@@ -7,6 +7,13 @@ end
 
 def create
   @reservation = Reservation.new(reservation_params)
+  if @reservation.save
+    flash[:notice] = "Reservation was successfully created."
+    redirect_to reservations_path
+  else
+    flash[:alert] = "Reservation was not successfully created."
+    render :new
+  end
 end
 
 def show
