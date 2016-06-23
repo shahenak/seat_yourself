@@ -10,9 +10,10 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
+    @reservation = @restaurant.reservations.build
     if @restaurant.save
       flash[:notice] = "Restaurant was successfully created."
-      redirect_to restaurant_path
+      redirect_to restaurants_path
     else
       flash[:alert] = "Restaurant was not created."
       render :new
@@ -27,7 +28,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
     if @restaurant.update_attributes(restaurant_params)
       flash[:notice] = "Restaurant was successfully updated."
-      redirect_to restaurant_path
+      redirect_to restaurants_path
     else
       flash[:alert] = "Restaurant not successfully updated."
       render :edit

@@ -6,7 +6,7 @@ def new
 end
 
 def create
-  @reservation = Reservation.new(reservation_params)
+  @reservation = @restaurant.reservations.build(reservation_params)
   if @reservation.save
     flash[:notice] = "Reservation was successfully created."
     redirect_to reservations_path
