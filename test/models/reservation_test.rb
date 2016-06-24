@@ -5,7 +5,7 @@ class ReservationTest < ActiveSupport::TestCase
     @reservation = FactoryGirl.create :reservation
   end
 
-  test "valid restaurant" do
+  test "valid reservation" do
     assert_equal true, @reservation.valid?
     puts @reservation.time
     puts @reservation.size
