@@ -10,4 +10,16 @@ class ReservationTest < ActiveSupport::TestCase
     puts @reservation.time
     puts @reservation.size
   end
+
+  test "invalid reservation due to no time input" do
+    @reservation.time = nil
+    assert_equal false, @reservation.valid?
+  end
+
+  test "invalid reservation due to size" do
+    @reservation.size = nil
+    assert_equal false, @reservation.valid?
+  end
+
+
 end
