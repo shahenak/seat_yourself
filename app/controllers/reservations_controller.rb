@@ -1,4 +1,5 @@
 class ReservationsController < ApplicationController
+before_action :ensure_logged_in, only: [:destroy, :create, :update]
 before_action :load_restaurant
 before_action :find_reservation, only: [:show, :edit, :update, :destroy]
 
@@ -26,7 +27,6 @@ end
 
 
 def update
-  @reservation = Reservation.find(reservation_params)
   if @reservation.update_attributes(reservation_params)
     flash[:notice] = "The reservation has been updated."
     redirect_to restaurant_path(params[:restaurant_id])

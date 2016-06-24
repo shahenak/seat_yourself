@@ -21,7 +21,7 @@ class UserTest < ActiveSupport::TestCase
 
   end
 
-  test "invalid user due to phone" do
+  test "invalid user due to password" do
     @user.password = nil
     assert_equal false, @user.valid?
 

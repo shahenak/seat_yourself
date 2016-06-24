@@ -1,6 +1,9 @@
-<%= link_to "Back to all Restaurants", restaurants_path %>
+<%= link_to "Back to all Restaurants", restaurants_path %><br>
+<%= link_to "Edit Restaurant", edit_restaurant_path(@restaurant) %>
+<%= link_to "Delete Restaurant", restaurants_path, method: :delete %>
 <h2><%= @restaurant.name %></h2>
 <h5>Address: <%= @restaurant.address %></h5>
 <h5>Phone Number: <%= @restaurant.phone %></h5>
 <h3>Book a Reservation</h3>
+
 <%= render 'reservation' %>
