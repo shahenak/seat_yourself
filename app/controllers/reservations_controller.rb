@@ -17,7 +17,7 @@ def create
   @reservation.user = current_user
   if @reservation.save
     flash[:notice] = "Reservation was successfully created."
-    redirect_to restaurants_path
+    redirect_to restaurant_path(@restaurant.id)
   else
     flash[:alert] = "Reservation was not successfully created."
     render :new
