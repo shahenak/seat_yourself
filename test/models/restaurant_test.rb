@@ -8,4 +8,5 @@ class RestaurantTest < ActiveSupport::TestCase
   test "valid restaurant" do
     assert_equal true, @restaurant.valid?
   end
+
 end
