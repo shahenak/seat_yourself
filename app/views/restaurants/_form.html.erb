@@ -1,11 +1,16 @@
 <%= form_for @restaurant do |f| %>
-<% if @restaurant.errors.any? %>
-  <% @restaurant.errors.full_messages.each do |message| %>
+  <% if @restaurant.errors.any? %>
+  <div class="error_messages">
+    <h2>Form is invalid</h2>
+      <h4>There are <%= pluralize(@restaurant.errors.count, "errors") %> that prohibited you from creating a restaurant.</h4>
     <ul>
-      <li><%= message %></li>
+      <% @restaurant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
     </ul>
-  <% end %>
-<% end %>
+    <% end %>
+  </div>
+
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name%>

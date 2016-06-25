@@ -8,6 +8,7 @@ end
 
 def destroy
   @reservation.destroy
+  redirect_to restaurant_path(@reservation.restaurant_id)
 end
 
 def edit
@@ -21,7 +22,7 @@ def create
     redirect_to restaurant_path(@restaurant.id)
   else
     flash[:alert] = "Reservation was not successfully created."
-    render :new
+    render 'restaurants/show'
   end
 end
 
