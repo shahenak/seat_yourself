@@ -13,12 +13,10 @@
   <% end %>
 <% end %>
 
-<% if @user.owned_restaurants != nil%>
+<% if @user.owned_restaurants %>
   <h4>Reservations made at Your Restaurant:</h4>
   <% @user.owned_restaurants.each do |owned_restaurant| %>
-    <% owned_restaurant.reservations.each do |reservation| %>
-      <%= reservation %>
-    <% end %>
+  <%= owned_restaurant %>
   <% end %>
 <% else %>
 <% end %>
