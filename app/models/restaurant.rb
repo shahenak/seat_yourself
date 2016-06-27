@@ -6,8 +6,8 @@ class Restaurant < ActiveRecord::Base
   validates :name, :address, :phone, :capacity, presence: true
 
 
-def seats_remaining
-  100 - reservations.sum(:size)
+def seats_remaining(time)
+  100 - reservations.where(time: time).sum(:size)
 end
 
 

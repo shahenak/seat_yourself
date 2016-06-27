@@ -1,7 +1,7 @@
 <%= form_for ([@restaurant, @reservation]) do |f| %>
   <div class="field">
     <%= f.label :time %><br>
-    <%= f.datetime_field :time%>
+    <%= f.datetime_select :time, discard_minute: true %>
   </div>
 
   <div class="field">
