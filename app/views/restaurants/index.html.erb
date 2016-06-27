@@ -1,12 +1,24 @@
-<h1>All Restaurants</h1>
-<% if current_user %>
-  <%= link_to "Create a New Restaurant", new_restaurant_path %>
-<% end %>
+<body>
+<nav>
+  <h1 class="headers">All Restaurants</h1>
+  <% if current_user %>
+    <div class="links"><%= link_to "Create a New Restaurant", new_restaurant_path %></div>
+  <% end %>
+</nav>
+
+
+<div class="all_restaurants">
 <% @restaurants.each do |restaurant| %>
-<h4><%= restaurant.name %></h4>
+<div class="restaurant_container">
+<h4 class="restaurant_name"><%= restaurant.name %></h4>
   <p>
-    Address: <%= restaurant.address %><br>
-    Phone Number: <%= restaurant.phone %>
+    <ul>
+      <li class="restaurant_info"> Address: <%= restaurant.address %></li><br>
+      <li class="restaurant_info"> Phone Number: <%=restaurant.phone %></li>
+    </ul>
   </p>
 <h5><%= link_to "View Restaurant/Book Reservation", restaurant_path(restaurant.id) %></h5>
+</div>
 <% end %>
+</div>
+</body>
