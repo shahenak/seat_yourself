@@ -7,15 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% unless current_user %>
-    <%= link_to "Sign Up", new_user_path %><br>
-  <% end %>
-  <% unless current_user %>
-  <%= link_to "Log In", new_session_path %><br>
-  <% end %>
-  <% unless current_user == nil %>
+
+
+  <% if current_user %>
     <%= link_to "Log Out", session_path("current"), method: :delete  %><br>
-    <%= link_to "View Profile", user_path %>
+    <%= link_to "View Profile", user_path(current_user.id) %>
+  <% else %>
+    <%= link_to "Sign Up", new_user_path %><br>
+    <%= link_to "Log In", new_session_path %><br>
   <% end %>
 
 

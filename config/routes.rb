@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'users#new'
+  root 'restaurants#index'
 
   resources :users, only: [:new, :create, :show]
   resources :restaurants do

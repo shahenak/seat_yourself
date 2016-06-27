@@ -1,2 +1,24 @@
-<h1><%= @user.name %></h1>
-<p>blah</p>
+<%= link_to "Back to all Restaurants", restaurants_path %>
+<h1>Hello, <%= @user.name.capitalize %>!</h1>
+<% if @user.reservations != nil %>
+<h4>Your Reservations</h4>
+  <% @user.reservations.each do |reservation| %>
+  <p>
+    <h3><%= reservation.restaurant.name %></h3>
+    <ul>
+      <li>At: <%= reservation.time %></li>
+      <li>For: <%= reservation.size %> people</li>
+    </ul>
+  </p>
+  <% end %>
+<% end %>
+
+<% if @user.owned_restaurants != nil%>
+  <h4>Reservations made at Your Restaurant:</h4>
+  <% @user.owned_restaurants.each do |owned_restaurant| %>
+    <% owned_restaurant.reservations.each do |reservation| %>
+      <%= reservation %>
+    <% end %>
+  <% end %>
+<% else %>
+<% end %>
