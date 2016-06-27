@@ -4,7 +4,7 @@
 <h4>Your Reservations</h4>
   <% @user.reservations.each do |reservation| %>
   <p>
-    <h3><%= reservation.restaurant.name %></h3>
+    <h4><%= reservation.restaurant.name %></h4>
     <ul>
       <li>At: <%= reservation.time %></li>
       <li>For: <%= reservation.size %> people</li>
@@ -16,7 +16,17 @@
 <% if @user.owned_restaurants %>
   <h4>Reservations made at Your Restaurant:</h4>
   <% @user.owned_restaurants.each do |owned_restaurant| %>
-  <%= owned_restaurant %>
+    <h3><%= owned_restaurant.name %></h3>
+      <% owned_restaurant.reservations.each do |reservation| %>
+      <p>
+        <ul>
+          <li>At: <%= reservation.time %></li>
+          <li>For: <%= reservation.size %> people</li>
+          <li>Made By: <%= reservation.user.name %></li>
+          <li>Phone: <%= reservation.user.phone %></li>
+        </ul>
+      </p>
+      <% end %>
   <% end %>
 <% else %>
 <% end %>

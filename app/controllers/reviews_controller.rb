@@ -13,7 +13,7 @@ class ReviewsController < ApplicationController
     @review.user = current_user
     if @review.save
       flash[:notice] = "Review was successfully created."
-      redirect_to restaurants_url
+      redirect_to restaurant_path(@restaurant.id)
     else
       flash[:alert] = "Review was not created."
       render :new
