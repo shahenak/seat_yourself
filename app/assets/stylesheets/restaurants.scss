@@ -8,35 +8,58 @@
 }
 
 
-body{
+.background{
   background-size: cover;
   background-repeat: no-repeat;
   height:100%;
-  margin: 0 auto;
-  background-image: url("background.png");
+  background-image: url("background.jpg");
   overflow: hidden;
 }
 
 .headers {
   color: white;
   display: block;
-  width:100%;
+  padding: 10px 20px 10px;
+  margin: 5% 13% 0 13%;
+  font-size: 35px;
+  font-weight: bolder;
+  text-shadow: -3px -1px 0 #000,
 }
 
 .links{
   display: inline;
   color: white;
-  padding: 10px;
+  padding: 10px 40px 10px;
+  margin: 0 13% 0 13%;
+
 }
 
-.restaurant_container{
-  display: inline-block;
-  width: 15%;
-  padding: 10px;
-  background-color: white;
-  margin: 10px;
+.restaurant_container {
+  display: flex;
+  margin: 0 13% 0 13%;
+
+}
+
+.restaurant{
+  flex-grow: 1;
+  margin: 5px 10px;
+  padding: 10px 20px;
+  background-color: rgba(255,255,255,0.9);;
+  font-family: source-sans-pro,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  font-style: normal;
 }
 
 .restaurant_name {
+  font-family: source-sans-pro,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
 
+.restaurant_info {
+  line-height: 20%;
+  text-indent: -.7em;
+}
+ul {
+  padding: 8px 12px;
 }
