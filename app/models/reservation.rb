@@ -7,15 +7,15 @@ class Reservation < ActiveRecord::Base
   # validates size, :inclusion => { :in => r, :min => 1, :max => 10} }
   # lambda { |foo| foo.allowed_types }
   #validates_inclusion_of :size, in: lambda { |reservation| 1..reservation.restaurant.capacity }
-  validates_inclusion_of :size, in: lambda { |reservation| 1..reservation.restaurant.seats_remaining }
-
   validates :time, :size, presence: true
+  validate :restaurant_has_space
 
-def seats_taken
-  var = @reservations.select{|element| element[:restaurant_id] == params[:restaurant_id] && element[:time] == params[:time]}
-  var.map(&:size).reduce(:+)
-end
-
+  def restaurant_has_space
+    if self.size.between?(1,restaurant.seats_remaining(time))
+    else
+      errors.add(:size, "There is not enough space in the restaurant.")
+    end
+  end
 
 
 # def seats_taken
