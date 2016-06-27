@@ -32,7 +32,7 @@
     <h3>Book a Reservation</h3>
     <%= render 'reservation' %>
   <% else %>
-    <p>Please <% link_to "Log In", new_session_path %> to create a reservation</p>
+    <p>Please <%= link_to "Log In", new_session_path %> to create a reservation</p>
 <% end %>
 
 

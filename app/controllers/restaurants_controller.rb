@@ -19,6 +19,7 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
+    @restaurant.owner = current_user
     if @restaurant.save
       flash[:notice] = "Restaurant was successfully created."
       redirect_to restaurants_path
@@ -52,6 +53,6 @@ class RestaurantsController < ApplicationController
 
   private
   def restaurant_params
-    params.require(:restaurant).permit(:name, :address, :phone, :capacity)
+    params.require(:restaurant).permit(:name, :address, :phone, :capacity, :user_id)
   end
 end
