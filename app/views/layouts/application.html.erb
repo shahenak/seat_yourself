@@ -15,6 +15,7 @@
   <% end %>
   <% unless current_user == nil %>
     <%= link_to "Log Out", session_path("current"), method: :delete  %><br>
+    <%= link_to "View Profile", user_path %>
   <% end %>
 
 
