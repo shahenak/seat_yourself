@@ -4,11 +4,12 @@
 <%= link_to "< Back to all Restaurants", restaurants_path %>
 </div>
 
-<% if current_user && (current_user.id == @restaurant.user_id) && @restaurant.id %>
-  <%= link_to "Edit Restaurant Information", edit_restaurant_path(@restaurant) %>
-<% end %>
+
 <div class="info">
 <h2><%= @restaurant.name %></h2>
+<% if current_user && (current_user.id == @restaurant.user_id) && @restaurant.id %>
+  <%= link_to "(Edit Restaurant Information)", edit_restaurant_path(@restaurant) %>
+<% end %>
 <h5>Address: <%= @restaurant.address %></h5>
 <h5>Phone Number: <%= @restaurant.phone %></h5>
 </div>
