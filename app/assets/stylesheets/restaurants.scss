@@ -8,7 +8,7 @@
 }
 
 
-.background{
+.background {
   background-size: cover;
   background-repeat: no-repeat;
   height:100%;
@@ -28,11 +28,10 @@
 }
 
 .links{
-  display: inline;
-  color: white;
-  padding: 10px 40px 10px;
-  margin: 0 13% 0 13%;
-
+  display: inline-block;
+  background-color: white;
+  padding: 10px 18px;
+  margin: 5% 40%;
 }
 
 .restaurant_container {
@@ -100,7 +99,8 @@ ul {
 
 .reservations_heading,
 .book_reservation_heading,
-.write_review {
+.write_review,
+.create_heading {
   color: white;
   background-color: black;
   display: inline-block;

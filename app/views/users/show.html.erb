@@ -1,6 +1,6 @@
 <%= link_to "Back to all Restaurants", restaurants_path %>
 <h1>Hello, <%= @user.name.capitalize %>!</h1>
-<% if @user.reservations != nil %>
+<% if @user.reservations %>
 <h4>Your Reservations</h4>
   <% @user.reservations.each do |reservation| %>
   <p>

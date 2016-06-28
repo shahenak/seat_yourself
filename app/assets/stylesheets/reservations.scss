@@ -11,3 +11,20 @@
 label {
   color: white;
 }
+
+.edit_heading {
+  color: white;
+  background-color: black;
+  display: inline-block;
+  padding: 10px;
+}
+
+.background_reservation_edit {
+  background-size: cover;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: url("reservation.jpg");
+  padding-left: 40px;
+  margin: 0;
+  padding-bottom: 35%;
+}
