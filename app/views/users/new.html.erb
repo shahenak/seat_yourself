@@ -23,16 +23,16 @@
           <%= f.text_field :email, placeholder: "Email" %>
         </div>
         <div class="field">
-          <%= f.label :phone %><br>
-          <%= f.text_field :phone %>
+
+          <%= f.text_field :phone, placeholder: "Phone number" %>
         </div>
         <div class="field">
-          <%= f.label :password %><br>
-          <%= f.password_field :password %>
+
+          <%= f.password_field :password, placeholder: "Password" %>
         </div>
         <div class="field">
-          <%= f.label :password_confirmation %><br>
-          <%= f.password_field :password_confirmation %>
+        
+          <%= f.password_field :password_confirmation, placeholder: "Re-enter password" %>
         </div>
         <div class="actions"><%= f.submit %></div>
         <% end %>
