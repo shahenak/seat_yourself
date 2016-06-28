@@ -1,7 +1,7 @@
 <div class="page-container">
   <div class="page-canvas">
     <div class = "signin-container">
-      <h1 class="tagline">Log in</h1>
+      <h1 class="tagline">Log in to SeatYourself</h1>
         <%= form_tag sessions_path do %>
           <div class="field">
             <%= text_field_tag :email, params[:email], placeholder: "Email", class: 'email-box' %>
@@ -9,7 +9,7 @@
           <div class="field">
             <%= password_field_tag :password, "",placeholder: "Password", class: 'password-box' %>
           </div>
-          <div class="actions"><%= submit_tag "Log in" %></div>
+          <div class="actions"><%= submit_tag "Log in", class: 'login-submit' %></div>
         <% end %>
     </div>
   </div>
