@@ -17,32 +17,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<header>
-<nav class="nav-bar">
-  <h1 class='logo'><%= link_to "SeatYourself", root_path, class: 'logotext'%></h1>
-  <ul class = 'nav-list'>
-  <% if current_user %>
-    <li><%= link_to "Log Out", session_path("current"), method: :delete  , class: "nav_link"%></li>
-    <li><%= link_to "View Profile", user_path(current_user.id), class: "nav_link" %></li>
-  <% else %>
-    <li><%= link_to "Sign Up", new_user_path , class: "nav_link"%></li>
-    <li><%= link_to "Log In", new_session_path , class: "nav_link"%></li>
-  <% end %>
-  </ul>
-</nav>
-
-</header>
-
-<%if flash[:notice]%>
-<p id="notice"><%= flash[:notice] %></p>
-<% end %>
-
-<% if flash[:alert]%>
-<p id="alert"><%= flash[:alert] %></p>
-<% end %>
+  <header>
+    <h1 class="logo"><%= link_to "SeatYourself", root_path, class: 'logotext'%></h1>
+  </header>
 
 <%= yield %>
+
 
 
 </body>

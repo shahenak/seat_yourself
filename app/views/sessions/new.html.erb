@@ -1,12 +1,25 @@
-<h1>Log in</h1>
-<%= form_tag sessions_path do %>
-  <div class="field">
-    <%= label_tag :email %><br/>
-    <%= text_field_tag :email, params[:email] %>
+<div class="page-container">
+  <div class="page-canvas">
+    <div class = "signin-container">
+      <h1 class="tagline">Log in to SeatYourself</h1>
+        <%= form_tag sessions_path do %>
+          <div class="field">
+            <%if flash[:notice]%>
+            <p id="notice"><%= flash[:notice] %></p>
+            <% end %>
+
+            <% if flash[:alert]%>
+            <p id="alert"><%= flash[:alert] %></p>
+            <% end %>
+            <%= text_field_tag :email, params[:email], placeholder: "Email", class: 'email-box' %>
+          </div>
+          <div class="field">
+            <%= password_field_tag :password, "",placeholder: "Password", class: 'password-box' %>
+          </div>
+          <div class="actions"><%= submit_tag "Log in", class: 'login-submit' %></div>
+
+          <div class="button-wrapper"><%= link_to "Sign Up", new_user_path , class: "signup-button"%></div>
+        <% end %>
+    </div>
   </div>
-  <div class="field">
-    <%= label_tag :password %><br/>
-    <%= password_field_tag :password %>
-  </div>
-  <div class="actions"><%= submit_tag "Log in" %></div>
-<% end %>
+</div>
