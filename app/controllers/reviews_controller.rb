@@ -16,7 +16,7 @@ class ReviewsController < ApplicationController
       redirect_to restaurant_path(@restaurant.id)
     else
       flash[:alert] = "Review was not created."
-      render :new
+      redirect_to restaurant_path(@restaurant.id)
     end
   end
 
