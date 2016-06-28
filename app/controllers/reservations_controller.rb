@@ -30,7 +30,7 @@ end
 def update
   if @reservation.update_attributes(reservation_params)
     flash[:notice] = "The reservation has been updated."
-    redirect_to restaurant_path(params[:restaurant_id])
+    redirect_to user_path
   else
     flash[:alert] = "The reservation was not updated successfully"
     render :edit

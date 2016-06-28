@@ -19,23 +19,6 @@
     </p>
 <% end %>
 
-
-
-<h3 class="reservations_heading">Current Reservations For <%= @restaurant.name %></h3>
-<% @restaurant.reservations.each do |reservation| %>
-  <p>
-    <% if reservation.user != nil %>
-      Date/Time: <%= reservation.time %><br>
-      Party Size: <%= reservation.size %><br>
-      Booked By: <%= reservation.user.name %>
-    <% end %>
-    </p>
-    <% if current_user && (current_user.id == reservation.user_id) && reservation.id %>
-      <%= link_to "Edit Reservation", edit_restaurant_reservation_path(@restaurant.id, reservation.id) %>
-      <%= link_to "Cancel Reservation", restaurant_reservation_path(@restaurant, reservation), method: :delete %>
-    <% end %>
-<% end %>
-
 <% if current_user %>
     <h3>Book a Reservation</h3>
     <%= render 'reservation' %>

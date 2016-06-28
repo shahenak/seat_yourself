@@ -9,6 +9,7 @@
       <li>At: <%= reservation.time %></li>
       <li>For: <%= reservation.size %> people</li>
     </ul>
+    <%= link_to "Edit Reservation", edit_restaurant_reservation_path(reservation.restaurant_id, reservation.id) %>
   </p>
   <% end %>
 <% end %>
