@@ -1,33 +1,56 @@
-<%= link_to "Back to all Restaurants", restaurants_path %>
-<h1>Hello, <%= @user.name.capitalize %>!</h1>
-<% if @user.reservations != nil %>
-<h4>Your Reservations</h4>
-  <% @user.reservations.each do |reservation| %>
-  <p>
-    <h4><%= reservation.restaurant.name %></h4>
-    <ul>
-      <li>At: <%= reservation.time %></li>
-      <li>For: <%= reservation.size %> people</li>
-    </ul>
-    <%= link_to "Edit Reservation", edit_restaurant_reservation_path(reservation.restaurant_id, reservation.id) %>
-  </p>
-  <% end %>
-<% end %>
+<body class="user-background">
+  <div class="back-link">
+    <%= link_to "Back to all Restaurants", restaurants_path %>
+  </div>
 
-<% if @user.owned_restaurants %>
-  <h4>Reservations made at Your Restaurant:</h4>
-  <% @user.owned_restaurants.each do |owned_restaurant| %>
-    <h3><%= owned_restaurant.name %></h3>
-      <% owned_restaurant.reservations.each do |reservation| %>
-      <p>
-        <ul>
-          <li>At: <%= reservation.time %></li>
-          <li>For: <%= reservation.size %> people</li>
-          <li>Made By: <%= reservation.user.name %></li>
-          <li>Phone: <%= reservation.user.phone %></li>
-        </ul>
-      </p>
+  <div class="greeting">
+    Hello, <%= @user.name.capitalize %>!
+  </div>
+
+  <div class="reservations">
+    <% if @user.reservations != nil %>
+    <div class="heading">Your Reservations</div>
+      <div class="reservation-block">
+        <% @user.reservations.each do |reservation| %>
+        <p class="reservation-element">
+          <h4><%= reservation.restaurant.name %></h4>
+          <ul>
+            <li class="reservation-item">At: <%= reservation.time %></li>
+            <li class="reservation-item">For: <%= reservation.size %> people</li>
+          </ul>
+          <div class="edit-link">
+          <%= link_to "Edit Reservation", edit_restaurant_reservation_path(reservation.restaurant_id, reservation.id) %>
+          </div>
+        </p>
+      </div>
       <% end %>
+    <% end %>
+  </div>
+
+<div class="owned-restaurants">
+  <% if @user.owned_restaurants %>
+    <div class="owned-heading">
+      Reservations made at Your Restaurant
+    </div>
+    <div class="owned-reservation-block">
+    <% @user.owned_restaurants.each do |owned_restaurant| %>
+      <div class="restaurant-name">
+        <%= owned_restaurant.name %>
+      </div>
+        <% owned_restaurant.reservations.each do |reservation| %>
+        <p  class="owned-reservation-element">
+          <ul>
+            <li class="owned-reservation-item">At: <%= reservation.time %></li>
+            <li class="owned-reservation-item">For: <%= reservation.size %> people</li>
+            <li class="owned-reservation-item">Made By: <%= reservation.user.name %></li>
+            <li class="owned-reservation-item">Phone: <%= reservation.user.phone %></li>
+          </ul>
+        </p>
+        <% end %>
+    <% end %>
+  </div>
+  <% else %>
   <% end %>
-<% else %>
-<% end %>
+</div>
+
+</body>
