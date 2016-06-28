@@ -7,13 +7,14 @@
     Hello, <%= @user.name.capitalize %>!
   </div>
 
-  <div class="reservations">
+
     <% if @user.reservations != nil %>
+    <div class="reservations">
     <div class="heading">Your Reservations</div>
       <div class="reservation-block">
         <% @user.reservations.each do |reservation| %>
         <p class="reservation-element">
-          <h4><%= reservation.restaurant.name %></h4>
+          <%= reservation.restaurant.name %>
           <ul>
             <li class="reservation-item">At: <%= reservation.time %></li>
             <li class="reservation-item">For: <%= reservation.size %> people</li>
@@ -24,11 +25,16 @@
         </p>
       </div>
       <% end %>
+      <% else %>
+      <p class="no-reso">
+        You have no reservations at this time!
+      </p>
     <% end %>
   </div>
 
-<div class="owned-restaurants">
-  <% if @user.owned_restaurants %>
+
+  <% if @user.owned_restaurants !=nil %>
+    <div class="reservations">
     <div class="owned-heading">
       Reservations made at Your Restaurant
     </div>
@@ -50,6 +56,9 @@
     <% end %>
   </div>
   <% else %>
+  <p class="no-owner-reso">
+    There are no reservations at your restaurant at this time!
+  </p>
   <% end %>
 </div>
 

@@ -80,6 +80,18 @@ ul
   margin: 5px;
 }
 
+.no-reso{
+  background-color: #480000;
+  opacity: 0.7;
+  height:100%;
+  padding: 10px 15px;
+  float: right;
+  width: 57.5%;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-family: Helvetica, Arial;
+}
+
 .owned-restaurants{
   background-color: #480000;
   opacity: 0.7;
@@ -122,4 +134,16 @@ ul
   font-size: 16px;
   display: inline-block;
   margin: 5px;
+}
+
+.no-owner-reso{
+  background-color: #480000;
+  opacity: 0.7;
+  height:100%;
+  padding: 10px 15px;
+  float: right;
+  width: 57.5%;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-family: Helvetica, Arial;
 }
