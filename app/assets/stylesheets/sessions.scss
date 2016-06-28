@@ -9,11 +9,7 @@ body{
   background-repeat: no-repeat;
 }
 
-#alert{
-  color:red;
-  margin: 0;
-  margin-bottom: 10px;
-}
+
 .logo{
   padding: 0 40px;
   line-height: 60px;
@@ -56,13 +52,16 @@ body{
   width: 100%;
   background-color: rgba(255,255,255,0.4)
 }
-
-label {
-  color: #292f33;
+.button-wrapper{
+  margin-bottom: 30px;
+  height: 50px;
+  background-color: #2ecc71;
+  text-align: center;
 }
 
-.login-submit
+//button styling
 
+.login-submit
 {
   margin: 5px 0;
   position: relative;
@@ -76,9 +75,7 @@ label {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   background: #2ecc71;
   border: 0;
-
   cursor: pointer;
-
 }
 
 .signup-button{
@@ -99,17 +96,7 @@ label {
   height: 100%;
 }
 
-.button-wrapper{
-  margin-bottom: 30px;
-  height: 50px;
-  background-color: #2ecc71;
-  text-align: center;
-}
-
-a:hover {
-    color: white;
-    text-decoration: none;
-}
+// hover effects
 
 .login-submit:hover{
   background: #27ac5f;
@@ -122,11 +109,12 @@ a:hover {
 }
 
 .signup-button:hover{
+  color: white;
+  text-decoration: none;
   background: #27ac5f;
   -o-transition:.5s;
   -ms-transition:.5s;
   -moz-transition:.5s;
   -webkit-transition:.5s;
   transition:.5s;
-
 }
