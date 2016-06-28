@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  
+  layout "login_page"
   def new
   end
 
