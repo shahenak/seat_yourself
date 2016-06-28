@@ -7,9 +7,10 @@ body{
 }
 header{
   height: 60px;
-  padding: 0 20px;
+
 }
 .logo{
+    padding: 0 40px;
   line-height: 60px;
   font-size: 22px;
   font-weight: 300;
@@ -100,4 +101,24 @@ label {
 a:hover {
     color: white;
     text-decoration: none;
+}
+
+.login-submit:hover{
+  background: #27ac5f;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+
+  transition:.5s;
+}
+
+.signup-button:hover{
+  background: #27ac5f;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+
 }

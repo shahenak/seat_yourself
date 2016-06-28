@@ -20,6 +20,7 @@
 
 <header>
 <nav class="nav-bar">
+  <h1 class='logo'>SeatYourself</h1>
   <ul class = 'nav-list'>
   <% if current_user %>
     <li><%= link_to "Log Out", session_path("current"), method: :delete  , class: "nav_link"%></li>
