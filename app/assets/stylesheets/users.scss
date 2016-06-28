@@ -36,4 +36,150 @@
 .submit:hover{
   background: #ff2700;
 
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.html{
+  height: 100%;
+}
+
+.user-background{
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:100%;
+  background-image: url("dining.jpg");
+  text-align: center;
+  overflow: hidden;
+}
+
+.back-link{
+  float:left;
+  font-size: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 15px;
+  padding: 0px;
+}
+
+.greeting{
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  text-shadow: 4px 4px 6px #000;
+  margin-bottom: 20px;
+  vertical-align: text-top;
+}
+
+.reservations{
+  background-color: #480000;
+  opacity: 0.7;
+  height:100%;
+  padding: 10px 15px;
+  float:left;
+  width: 37.5%;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.heading{
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px #000;
+  margin-bottom: 20px;
+}
+
+.reservation-block{
+  padding: 0px;
+  margin: 0px;
+  color: lightgrey;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
+
+.reservation-element{
+  border-bottom: 2px solid grey;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+.reservation-item{
+  font-size: 16px;
+  display: inline-block;
+  margin: 5px;
+}
+
+.no-reso{
+  background-color: #480000;
+  opacity: 0.7;
+  height:100%;
+  padding: 10px 15px;
+  float: right;
+  width: 57.5%;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-family: Helvetica, Arial;
+}
+
+.owned-restaurants{
+  background-color: #480000;
+  opacity: 0.7;
+  height:100%;
+  padding: 10px 15px;
+  float: right;
+  width: 57.5%;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-family: Helvetica, Arial;
+}
+.restaurant-name {
+  font-size: 16px;
+  display: inline-block;
+  margin: 5px;
+  color: white;
+}
+
+.owned-heading{
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px #000;
+  margin-bottom: 20px;
+}
+
+.ownder-reservation-block{
+  padding: 0px;
+  margin: 0px;
+  color: lightgrey;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
+
+.owned-reservation-element{
+  border-bottom: 2px solid grey;
+}
+
+.owned-reservation-item{
+  font-size: 16px;
+  display: inline-block;
+  margin: 5px;
+}
+
+.no-owner-reso{
+  background-color: #480000;
+  opacity: 0.7;
+  height:100%;
+  padding: 10px 15px;
+  float: right;
+  width: 57.5%;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-family: Helvetica, Arial;
+
 }
