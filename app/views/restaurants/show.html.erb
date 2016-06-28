@@ -1,10 +1,7 @@
 <div class="restaurant_background">
-
 <div class="back_restaurants">
-<%= link_to "< Back to all Restaurants", restaurants_path %>
+  <%= link_to "< Back to all Restaurants", restaurants_path %>
 </div>
-
-
 <div class="info">
 <h2><%= @restaurant.name %></h2>
 <% if current_user && (current_user.id == @restaurant.user_id) && @restaurant.id %>
@@ -29,8 +26,6 @@
     <% end %>
     </p>
 <% end %>
-
-
 
 <h3 class="write_review">Write a review</h3>
 <%= render 'reviews/review' %>
