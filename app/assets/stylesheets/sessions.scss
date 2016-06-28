@@ -15,7 +15,7 @@ body{
   margin-bottom: 10px;
 }
 .logo{
-    padding: 0 40px;
+  padding: 0 40px;
   line-height: 60px;
 
   font-size: 26px;
@@ -24,7 +24,7 @@ body{
 }
 .page-container{
   margin: 0 auto;
-  padding: 50px 14px 15px;
+  padding: 75px 14px 15px;
   width: auto;
   max-width: 500px;
 }
@@ -36,7 +36,7 @@ body{
 
 }
 .page-canvas{
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(255, 255, 255);
 
     border: 1px solid;
     border-radius: 5px;
@@ -54,6 +54,7 @@ body{
   margin: 0 0 10px 0;
   height: 40px;
   width: 100%;
+  background-color: rgba(255,255,255,0.4)
 }
 
 label {
