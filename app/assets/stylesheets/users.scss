@@ -35,7 +35,7 @@
 
 .submit:hover{
   background: #ff2700;
-
+}
 
 *,
 *:after,
@@ -56,12 +56,22 @@
   overflow: hidden;
 }
 
-.back-link{
-  float:left;
+.back-link a{
+  float:right;
   font-size: 20px;
   font-family: Helvetica, Arial, sans-serif;
-  margin: 15px;
+  margin-top: -90px;
+  margin-right: 20px;
   padding: 0px;
+  display: inline-block;
+  color: white;
+  text-shadow: 4px 4px 6px #000;
+}
+
+.edit-link{
+  color: deepskyblue;
+  font-size: 16px;
+  font-family: Helvetica;
 }
 
 .greeting{
@@ -69,7 +79,7 @@
   font-family: Helvetica, Arial, sans-serif;
   font-size: 40px;
   text-shadow: 4px 4px 6px #000;
-  margin-bottom: 20px;
+  margin: 20px 0px;
   vertical-align: text-top;
 }
 
@@ -79,8 +89,8 @@
   height:100%;
   padding: 10px 15px;
   float:left;
-  width: 37.5%;
-  margin-left: 10px;
+  width: 40%;
+  margin-left: 20px;
   margin-top: 10px;
 }
 
@@ -92,16 +102,13 @@
   margin-bottom: 20px;
 }
 
-.reservation-block{
-  padding: 0px;
-  margin: 0px;
-  color: lightgrey;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 18px;
-}
 
 .reservation-element{
   border-bottom: 2px solid grey;
+  color: lightgrey;
+  font-size: 20px;
+  font-family: fantasy;
+  margin-top: 10px;
 }
 
 ul
@@ -113,6 +120,9 @@ ul
   font-size: 16px;
   display: inline-block;
   margin: 5px;
+  color: lightgrey;
+  font-family: Helvetica, Arial, sans-serif;
+
 }
 
 .no-reso{
@@ -133,9 +143,9 @@ ul
   height:100%;
   padding: 10px 15px;
   float: right;
-  width: 57.5%;
+  width: 55%;
   margin-top: 10px;
-  margin-right: 10px;
+  margin-right: 20px;
   font-family: Helvetica, Arial;
 }
 .restaurant-name {
@@ -151,17 +161,10 @@ ul
   font-size: 24px;
   text-shadow: 2px 2px 4px #000;
   margin-bottom: 20px;
+  text-align: center;
 }
 
-.ownder-reservation-block{
-  padding: 0px;
-  margin: 0px;
-  color: lightgrey;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 18px;
-}
-
-.owned-reservation-element{
+.owned-element{
   border-bottom: 2px solid grey;
 }
 
