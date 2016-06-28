@@ -19,7 +19,7 @@
 <body>
 
 
-<nav>
+<nav class="nav-bar">
   <% if current_user %>
     <%= link_to "Log Out", session_path("current"), method: :delete  , class: "nav_link"%>
     <%= link_to "View Profile", user_path(current_user.id), class: "nav_link" %>
