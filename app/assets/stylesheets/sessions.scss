@@ -5,7 +5,16 @@ html,
 body{
   height: 100%;
 }
-
+header{
+  height: 60px;
+  padding: 0 20px;
+}
+.logo{
+  line-height: 60px;
+  font-size: 22px;
+  font-weight: 300;
+  margin: 0px;
+}
 .page-container{
   margin: 0 auto;
   padding: 50px 14px 15px;
