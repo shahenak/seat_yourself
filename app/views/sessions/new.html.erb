@@ -4,6 +4,13 @@
       <h1 class="tagline">Log in to SeatYourself</h1>
         <%= form_tag sessions_path do %>
           <div class="field">
+            <%if flash[:notice]%>
+            <p id="notice"><%= flash[:notice] %></p>
+            <% end %>
+
+            <% if flash[:alert]%>
+            <p id="alert"><%= flash[:alert] %></p>
+            <% end %>
             <%= text_field_tag :email, params[:email], placeholder: "Email", class: 'email-box' %>
           </div>
           <div class="field">

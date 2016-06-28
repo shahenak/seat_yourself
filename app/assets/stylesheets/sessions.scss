@@ -4,17 +4,24 @@
 html,
 body{
   height: 100%;
+  background-image: url("background.jpg");
 }
 header{
   height: 60px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8)
 
+}
+#alert{
+  color:red;
+  margin: 0;
+  margin-bottom: 10px;
 }
 .logo{
     padding: 0 40px;
   line-height: 60px;
-  font-size: 22px;
-  font-weight: 300;
+
+  font-size: 26px;
+  font-weight: 400;
   margin: 0px;
 }
 .page-container{
@@ -31,7 +38,8 @@ header{
 
 }
 .page-canvas{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
+
     border: 1px solid;
     border-radius: 5px;
 
