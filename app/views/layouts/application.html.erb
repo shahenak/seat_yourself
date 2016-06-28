@@ -20,13 +20,15 @@
 
 
 <nav class="nav-bar">
+  <ul class = 'nav-list'>
   <% if current_user %>
-    <%= link_to "Log Out", session_path("current"), method: :delete  , class: "nav_link"%>
-    <%= link_to "View Profile", user_path(current_user.id), class: "nav_link" %>
+    <li><%= link_to "Log Out", session_path("current"), method: :delete  , class: "nav_link"%></li>
+    <li><%= link_to "View Profile", user_path(current_user.id), class: "nav_link" %></li>
   <% else %>
-    <%= link_to "Sign Up", new_user_path , class: "nav_link"%>
-    <%= link_to "Log In", new_session_path , class: "nav_link"%>
+    <li><%= link_to "Sign Up", new_user_path , class: "nav_link"%></li>
+    <li><%= link_to "Log In", new_session_path , class: "nav_link"%></li>
   <% end %>
+  </ul>
 </nav>
 
 
