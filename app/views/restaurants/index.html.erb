@@ -10,7 +10,7 @@
       <li class="restaurant_info"> Address: <%= restaurant.address %></li><br>
       <li class="restaurant_info"> Phone Number: <%=restaurant.phone %></li>
     </ul>
-<h5><%= link_to "View Restaurant/Book Reservation", restaurant_path(restaurant.id) %></h5>
+<div class="restaurant_info"><%= link_to "View Restaurant/Book Reservation", restaurant_path(restaurant.id) %></div>
 </div>
 <% end %>
 </div>
