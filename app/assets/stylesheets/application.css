@@ -24,6 +24,9 @@
    color: red;
  }
 
+
+/* Header */
+
 .logo{
   float: left;
 }
@@ -33,27 +36,37 @@ header{
   background-color: rgba(255, 255, 255, 0.7)
 }
 
+
+/* Nav Bar*/
 .nav-bar {
    overflow: hidden;
-   background-color: white;
-   padding: 0 20px;
+
+   padding: 0;
    margin: 0;
 
  }
 
  .nav_link{
-   padding:0 5px;
+   padding:0 10px;
    margin:0;
  }
 
 
  .nav-list li{
+   font-size: 16px;
    display: inline-block;
    line-height: 60px;
  }
 
  .nav-list{
    float: right;
-   padding:0;
+   padding:0 20px;
    margin:0;
  }
+
+
+/* Hover effect */
+.nav_link:hover{
+  color: white;
+  text-decoration: none;
+}
