@@ -14,6 +14,7 @@
   height:100%;
   background-image: url("background.jpg");
   overflow: hidden;
+  padding-bottom: 200px;
 }
 
 .headers {
@@ -72,4 +73,42 @@ ul {
 
 .info {
   color: white;
+}
+
+// carol's styling
+
+.restaurant_background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("reservation.jpg");
+  padding-left: 40px;
+  margin: 0;
+  padding-bottom: 50px;
+}
+
+.restaurant_reviews {
+  color: white;
+}
+
+.review_heading {
+  color: white;
+  background-color: black;
+  display: inline-block;
+  padding: 10px;
+}
+
+.reservations_heading,
+.book_reservation_heading,
+.write_review {
+  color: white;
+  background-color: black;
+  display: inline-block;
+  padding: 10px;
+}
+
+.back_restaurants {
+  background-color: white;
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
 }
