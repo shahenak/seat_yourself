@@ -30,6 +30,10 @@
 .logo{
   float: left;
 }
+.logotext{
+  text-decoration: none;
+  color: #292f33;
+}
 
 header{
   height: 60px;
@@ -69,4 +73,9 @@ header{
 .nav_link:hover{
   color: white;
   text-decoration: none;
+}
+
+.logotext:hover{
+  text-decoration: none;
+  color: #292f33;
 }
