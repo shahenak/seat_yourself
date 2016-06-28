@@ -37,16 +37,17 @@
 .restaurant_container {
   display: flex;
   margin: 0 13% 0 13%;
+  flex-wrap: wrap;
 
 }
 
 .restaurant{
-  flex-grow: 1;
+  flex-grow: 0;
   margin: 5px 10px;
   padding: 10px 20px;
   background-color: rgba(255,255,255,0.9);;
   font-family: source-sans-pro,Helvetica Neue,Helvetica,Arial,sans-serif;
-  font-size: 12px;
+  font-size: 10px;
   font-style: normal;
 }
 
@@ -59,6 +60,7 @@
 .restaurant_info {
   line-height: 20%;
   text-indent: -.7em;
+  font-size: 10px;
 }
 ul {
   padding: 8px 12px;
