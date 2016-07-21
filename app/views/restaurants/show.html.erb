@@ -30,3 +30,12 @@
 <h3 class="write_review">Write a review</h3>
 <%= render 'reviews/review' %>
 </div>
+
+<h4>Nearby Restaurants</h4>
+<% @nearby_restaurants.each do |nearby| %>
+  <ol>
+    <li>Name: <%= nearby.name %></li>
+    <li>Address: <%= nearby.address %></li>
+    <li>Distance: <%= nearby.display_distance_to(@restaurant) %> km</li>
+  </ol>
+<% end %>

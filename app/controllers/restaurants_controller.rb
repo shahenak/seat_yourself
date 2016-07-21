@@ -9,6 +9,7 @@ class RestaurantsController < ApplicationController
       @restaurant = Restaurant.find(params[:id])
       @reservation = @restaurant.reservations.build
       @review = @restaurant.reviews.build
+      @nearby_restaurants = @restaurant.nearbys
     end
 
   def new
